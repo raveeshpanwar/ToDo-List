@@ -1,0 +1,20 @@
+        <%-include('header');-%>
+        <div class="box" id="heading">
+              <h1>Today is <%= currentt %></h1>
+              <h1>Total Items <%=listName.length%></h1> 
+            </div>
+            <form method="post" action="/">
+                <input type="text" class='boxx' name="text1" placeholder="New-Item" autocomplete="off">
+                <button type="submit">+</button>
+            </form>
+             <div class="box">
+                    <%for(let i=0;i<listName.length;i++){%>
+                         
+                        <div class="item">   <P><%=i+1%></P> 
+                          <input type="checkbox">
+                        
+                     <P><%=listName[i]%></P>  
+                       </div> 
+                    <%}%>
+             </div>
+             <%-include('footer');-%>
